@@ -1,0 +1,21 @@
+# Python 缓存和虚拟环境
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 本地视频和处理结果
+*.mp4
+*.avi
+*.mov
+*.mkv
+outputs/*
+!outputs/.gitkeep
+data/*
+!data/README.md
+
+# 本地编辑器和系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,2 @@
+# OpenCV：读取、处理和写出图像/视频
+opencv-python>=4.8,<5
