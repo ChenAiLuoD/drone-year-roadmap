@@ -1,0 +1,11 @@
+# CMake 的 out-of-source 构建目录。
+build/
+
+# Python 运行时缓存。
+__pycache__/
+*.py[cod]
+
+# 自动生成的转换 CSV 和 PNG，不作为源文件提交。
+data/*_transformed.csv
+data/*_world.csv
+outputs/
