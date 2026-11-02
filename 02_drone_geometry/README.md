@@ -1,4 +1,4 @@
-# drone-geometry
+# 02_drone_geometry
 
 无人机坐标变换与轨迹可视化工具。项目用 C++17、CMake 和 Eigen 完成三维轨迹的 CSV 读写与刚体变换，用 GoogleTest/CTest 验证核心数学关系，再用 Python/Matplotlib 生成 3D 图。
 
@@ -31,7 +31,7 @@ p_target = R_target_source * p_source + t_target_source
 ## 目录结构
 
 ```text
-drone-geometry/
+02_drone_geometry/
 ├── CMakeLists.txt
 ├── include/                    # C++ 接口声明
 ├── src/                        # C++ 实现和命令行入口
