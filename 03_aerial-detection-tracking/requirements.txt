@@ -1,2 +1,3 @@
 ultralytics
 pillow
+PyYAML==6.0.2

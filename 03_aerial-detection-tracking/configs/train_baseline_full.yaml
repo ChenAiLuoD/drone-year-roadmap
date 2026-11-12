@@ -1,0 +1,27 @@
+# 第 3 周第 2 天完整基线训练配置。
+# 这个文件只固定实验条件，不保存训练权重或运行缓存。
+
+# 模型规格：使用项目中已有的轻量 YOLO 预训练权重。
+model: yolo26n.pt
+model_version: yolo26n.pt
+
+# 数据版本：由第二周生成的单类 vehicle YOLO 数据集。
+data: configs/dataset_v0.2.yaml
+data_version: uavdt-yolo-v0.2
+
+# 输入和训练规模：50 个 epoch 用于建立正式基线。
+imgsz: 640
+epochs: 50
+batch: 4
+
+# 可复现性和设备：固定随机种子，使用第 0 张 CUDA GPU。
+seed: 20261112
+device: 0
+deterministic: true
+workers: 2
+
+# 输出位置：runs/ 会被 .gitignore 忽略，日志和指标保留在本机。
+project: runs/week3_day2
+name: baseline_full_v0.2
+exist_ok: false
+cache: false

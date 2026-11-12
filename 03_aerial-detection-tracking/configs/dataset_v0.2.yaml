@@ -1,0 +1,8 @@
+# 项目使用的固定数据版本包装配置。
+# 外部数据集目录不提交到仓库；这里明确记录本机数据根路径。
+path: /home/chald/project/study_3/02/day2-4/uavdt-yolo-v0.2
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: vehicle
