@@ -1,6 +1,8 @@
 # 项目使用的固定数据版本包装配置。
-# 外部数据集目录不提交到仓库；这里明确记录本机数据根路径。
-path: /home/chald/project/study_3/02/day2-4/uavdt-yolo-v0.2
+# 外部数据集目录不提交到仓库。
+# 请从项目根目录运行训练；本机数据放在 data/uavdt-yolo-v0.2，该目录已被 .gitignore 排除。
+# 当前环境使用 data/uavdt-yolo-v0.2 指向本机数据目录的符号链接。
+path: data/uavdt-yolo-v0.2
 train: images/train
 val: images/val
 test: images/test

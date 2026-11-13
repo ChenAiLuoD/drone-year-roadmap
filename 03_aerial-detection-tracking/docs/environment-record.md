@@ -3,7 +3,7 @@
 ## 环境
 
 - 日期：2026-11-08
-- 项目路径：/home/chald/project/03_aerial-detection-tracking
+- 项目路径：项目根目录（本地）
 - 系统：Ubuntu 22.04（WSL）
 - Python：3.10.12
 - 虚拟环境：.venv-project
@@ -27,7 +27,7 @@ yolo checks
 ~~~bash
 yolo predict \
   model=yolo26n.pt \
-  source=/home/chald/project/study_3/01/day3/inputs/video_a.mp4 \
+  source=path/to/video_a.mp4 \
   imgsz=640 \
   conf=0.25 \
   device=0 \
@@ -54,3 +54,31 @@ yolo predict \
 - 输出视频：outputs/baseline/video_a_yolo26n/
 - 输出标签：outputs/baseline/video_a_yolo26n/labels/，679 个标签文件
 - 结论：这是通用预训练模型的原始基线，不是本项目训练成绩；后续训练模型必须单独记录。
+
+
+## 第 6 天：新虚拟环境验证记录
+
+- 验证结果：成功。
+- 验证目标：在全新的临时虚拟环境中启动推理/跟踪链路，不重新训练。
+- 环境目录：/tmp/week4-day6-verify
+- 安装来源：项目根目录的 requirements.txt
+- Ultralytics：8.4.211
+- PyTorch：2.14.1
+- 小样例：study_3/04/day4/inputs/video_c_pixabay_327970.mp4
+- 输出：/tmp/week4-day6-check/video_c_check.avi
+- 输入/输出帧数：318 / 318
+- 端到端 FPS：15.125
+- 计算 FPS：33.536
+- 实际运行耗时：约 22.7 秒
+- 运行中自动补装：lap 0.5.14；这是 ByteTrack 依赖，已将 lap>=0.5.12 加入 requirements.txt，并在 requirements-lock.txt 固定为 0.5.14 以避免新环境首次运行时自动安装。
+
+~~~bash
+cd ~/project/03_aerial-detection-tracking
+python3 -m venv /tmp/week4-day6-verify
+source /tmp/week4-day6-verify/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python scripts/evaluate_video.py --help
+~~~
+
+小样例验证命令已在新环境中成功执行，结果视频和计时 JSON/CSV 均已生成。

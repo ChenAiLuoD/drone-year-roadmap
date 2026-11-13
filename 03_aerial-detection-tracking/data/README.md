@@ -42,3 +42,15 @@ car / truck / bus -> vehicle -> class 0
 - UAVDT-Attributes/test/：官方 DET/MOT 测试序列属性。
 
 原始目录和标注正文不改写。转换数据若产生，放入新的版本目录并记录转换规则与统计量。
+
+
+## 独立测试视频 C
+
+- 来源：[Pixabay：Drone, drone footage, aerial](https://pixabay.com/videos/drone-drone-footage-aerial-327970/)
+- 许可：[Pixabay Content License](https://pixabay.com/service/license-summary/)
+- 访问/下载日期：2026-11-13
+- 本地路径：`study_3/04/day4/inputs/video_c_pixabay_327970.mp4`
+- 技术信息：H.264，3840×2160，约 59.94 FPS，约 5.3 秒，约 25 MB
+- 用途：仅作为未参与训练和开发的独立航拍测试视频，用于检测+ByteTrack流程验证。
+
+该视频和第 4 周前三天使用的 `video_a.mp4`、`video_b.mp4` 不是同一来源。原始视频及输出视频不提交 GitHub；仓库只记录来源、许可和复现实验信息。

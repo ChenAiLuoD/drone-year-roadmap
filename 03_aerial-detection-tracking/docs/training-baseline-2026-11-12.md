@@ -32,12 +32,14 @@
 cd ~/project/03_aerial-detection-tracking
 source .venv-project/bin/activate
 
+PROJECT_ROOT=/path/to/03_aerial-detection-tracking
+
 yolo detect train \
-  model=/home/chald/project/03_aerial-detection-tracking/yolo26n.pt \
-  data=/home/chald/project/03_aerial-detection-tracking/configs/dataset_v0.2.yaml \
+  model="$PROJECT_ROOT/yolo26n.pt" \
+  data="$PROJECT_ROOT/configs/dataset_v0.2.yaml" \
   imgsz=640 epochs=50 batch=4 seed=20261112 \
   device=0 deterministic=True workers=2 \
-  project=/home/chald/project/03_aerial-detection-tracking/runs/week3_day2 \
+  project="$PROJECT_ROOT/runs/week3_day2" \
   name=baseline_full_v0.2 exist_ok=False cache=False
 ```
 

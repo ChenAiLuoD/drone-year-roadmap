@@ -18,3 +18,4 @@ runs/
 *.tar.gz
 *.cache
 .DS_Store
+*.bak-*
