@@ -1,0 +1,28 @@
+# 公开参数模板。运行前填入本机绝对路径。
+# 或复制为 pipeline.local.yaml 并在 Launch 时通过 params_file 指定。
+/video_source_node:
+  ros__parameters:
+    input_path: /absolute/path/to/input.mp4
+    publish_rate: 2.0
+    loop: false
+    max_frames: 30
+/detector_node:
+  ros__parameters:
+    model_path: /absolute/path/to/best.pt
+    device: "0"
+    conf_threshold: 0.2
+    input_size: 640
+/tracker_node:
+  ros__parameters:
+    input_topic: /perception/detections
+    output_topic: /perception/tracks
+    iou_threshold: 0.3
+    max_missed_frames: 5
+/visualizer_node:
+  ros__parameters:
+    image_topic: /camera/image_raw
+    tracks_topic: /perception/tracks
+    output_topic: /perception/annotated_image
+    max_cache_size: 30
+    cache_timeout_seconds: 10.0
+    output_dir: outputs/pipeline

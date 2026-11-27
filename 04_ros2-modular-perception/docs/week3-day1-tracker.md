@@ -1,0 +1,5 @@
+- `test_track_manager.py`：3 passed。
+- 视频源以 `max_frames=10` 发布 10 帧后自动停止。
+- `detector_node` 发布 `/perception/detections`。
+- `tracker_node` 发布 `/perception/tracks`。
+- Topic 输出中出现 `id: '1'`。
